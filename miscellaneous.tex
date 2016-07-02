@@ -1,0 +1,44 @@
+\newpage
+\section{miscellaneous}
+\noindent
+The limitations of SHAKE according to \citet{Thompson2012}:\\
+1) only vertically incident plane S wave are modeled;\\
+2) nonlinear sress-strain behavior is approximated by the "equivalent-linear" method;\\
+3)lateral variations in the material properties are ignored;\\
+4)pore pressure generation of the saturated soils is ignored;\\
+5)inelastic strains are ignored.\\
+\\
+The reasons for discrepancies between the different nonlinear code and the observed ground motion \citep{Thompson2012}:\\
+1) errors in the assumed or estimated soil properties (e.g. modulus reduction curves and $V_s$ profile)\\
+2) the limitation of the constitutive model (e.g., whether or not the code accounts for inelastic strain)\\
+3) the wave propagation assumptions (e.g., whether or not the code allows non-vertical incidents.)\\
+\\
+If the transfer function is estimated from recorded ground motions, then we refer to it as the empirical transfer function (ETF) and if it is computed from a model, then we refer to it as a theoretical transfer function (TTF) \citep{Thompson2012}.\\
+\\
+The most common assumptions for computing a TTF include:\\
+1) The medium is assumed to consist of laterally constant layers overlying a non attenuating half space;\\
+2) wavefronts are assumed to be planar;\\
+3) only the horizontal polarized component of the S Wave (the SH-wave) is modeled.;\\
+4) damping is assumed to be frequency-independent \\
+\\
+\citet{Thompson2012} used \citet{Boore2007} procedure to estimate the $\rho$ from $V_p$\\
+\\
+\citet{Blakeslee1991} and \citet{Fukushima1992} observed frequency-dependent Q in the surface-downhole transfer function. \\
+\\
+\citet{Kausel2002} showed that even at the equivalent linear model the damping at the higher frequency is over estimated. They developed new approach to use frequency dependent viscoelastic parameters.\\
+\\
+\citet{Yoshida2002} noted that the equivalent linear method both over-estimates damping at high frequencies and over-estimate the maximum shear strength. They demonstrate that these limitations can be at least partially overcome with frequency-dependent viscoelastic parameters, as implemented in the program \textcolor{red}{FDEL}.\\
+\\
+\citet{Park2008} modified the equivalent linear approach to account for frequency-dependent soil properties, thus providing a procedure to account for both frequency and strain dependent modulus and damping.\\
+\\
+Complex Representation of Horizontal Motion:\\
+In order to construct an accurate representation of the horizontal motion \citet{Steidl1996} treated the horizontal time histories as two-dimensional signal by forming a complex time series: \\
+$A_H(t) = A_X(t) + iA_Y(t)$
+
+  
+
+
+
+
+
+
