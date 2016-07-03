@@ -1,0 +1,42 @@
+\newpage
+\section{Evaluation of 1D linear solution}
+\noindent
+In order to evaluation the 1D linear wave propagation solution in time domain we have following solution options:\\
+
+\begin{itemize}
+  \item Analytical solution
+  \item Empirical solution
+  \item Numerical solution
+\end{itemize}
+
+
+\subsection{Analytical solution}
+
+The analytical linear solution in frequency domain using equivalent viscous damping provide a correct response \citep{Stewart2008}. The key to this approach is the evaluation of transfer functions. \citet{Kramer1996} developed the transfer function for uniform and layered damped soil on elastic and rigid rock. We implemented the uniform damped soil on elastic bedrock. The solution of multilayered damped soil is implemented in different programs (e.g., SHAKE \citep{Schnabel1972}, DeepSoil, SeismoSoil).  
+
+\subsection{Empirical solution}
+Empirical solution, or empirical transfer function is considered as the most accurate results. In other methods, obviously, the model has many limitations. \citet{Bradley2011} developed the framework for validation of site response analyses and the potential sources for uncertainties. Due to these uncertainties we may achieve different transfer function in one pair of surface-borehole record for different earthquake (even in linear situation). one of \citet{Thomson2012} objectives was providing those stations which the transfer function of those stations don't change considerably, between different events. According to \citet{Thomson2012} 16 stations out of 100 studied stations are good options for study the 1D site response analysis. We choose our stations among the mentioned stations, however, we need to analyze multiple observation to obtain statistically significant inferences about the site transfer function. \citet{Kaklamanos2013} used mixed effect regression \citep{Pinheiro2006}.
+
+\subsection{Numerical solution}
+
+Numerical solution of site response analysis is done by solving wave propagation equation in time domain (using finite element or finite difference methods). In linear case, the anelastic losses due to the material internal friction is modeled thorough viscoelastic damping. \citet{Hashash2002} introduced a new formulation for viscous damping using the full Rayleigh damping to improve the accuracy of the wave propagation for soil columns greater than 50 m thick and also to improve the nonlinear site response analysis in short period. The numerical solution needs damping $(\xi)$, shear wave velocity $(V_s)$, and density ($\rho$) of each layer (or element). The KiK-net surface-borehole data is a large network of vertical seismic arrays maintained by the National Research Institute for Earth Science and Disaster Prevention (NIED) in Japan. They reported the $V_p$ and $V_s$ for the soil column of each pair of surface-borehole stations. In this study we estimate the $\rho$ according to the equation suggested by \citet{Boore2007}. This method has been used in previous studies \citep[e.g.][]{Kaklamanos2013, Thompson2012}.  The quality factor $(Q)$ is related to the damping ratio ($\xi$) by the equation $\xi = 1/(2*Q)$ \citep{Kramer1996}. \citet{Kaklamanos2013} reported the quality factor $(Q)$ for 100 Kik-net stations in the electronic supplement of the paper.They chose a value of $Q$ (constant value) to fit the motions recorded at the site, as explained in \citet{Thompson2012}. ({\color{red}Apparently, they used a uniform layer with average shear wave velocity.})
+
+
+\subsection{Comparison methods}
+
+To compare the results of simulation the following methods are common:
+
+\begin{itemize}
+  \item Compare the Fourier amplitude (surface motion)
+  \item Compare the spectral acceleration (surface motion)
+  \item Compare the transfer function 
+  \item Compare the signal in time domain.
+\end{itemize}
+
+\subsubsection{Spectral Acceleration}
+
+\citet{Kaklamanos2013} competed the $5\%$-damped PSA from the acceleration time series to quantify the observed and predicted surface ground motion.They compared the response spectra of the observed surface motion, $PSA_{obs}(T)$ with the response spectra of the predicted ground motion $PSA_{pred}(T)$. The predicted ground motion calculated using the site response model. They computed the residual between to aforementioned values in natural logarithmic space as:
+
+\begin{equation}
+PSA_{reside}(T) = ln[PSA_{obs}(T)] - ln[PSA_{pred}(T)]
+\end{equation} 
